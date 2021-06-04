@@ -1,0 +1,11 @@
+github-exporter:
+   tty: true
+   stdin_open: true
+   expose:
+     - 9171
+   ports:
+     - 9171:9171
+   image: infinityworks/github-exporter:latest
+   env_file: .env
+   environment:
+     - REPOS=prometheus/prometheus
